@@ -84,11 +84,4 @@ resource "yandex_alb_load_balancer" "this" {
       }
     }
   }
-
-  log_options {
-    discard_rule {
-      http_code_intervals = ["HTTP_2XX"]
-      discard_percent = 75
-    }
-  }
 }
